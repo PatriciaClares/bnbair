@@ -14,7 +14,7 @@
 
         console.log(objJson)
         let current_page = 1;
-        let records_per_page = 3;
+        let records_per_page = 4;
 
         this.init = function () {
             changePage(1);
@@ -23,7 +23,7 @@
         }
 
         let changePage = function (page) {
-            let listingTable = document.getElementById('row');
+            let listingTable = document.getElementById('card-deck');
 
             if (page < 1) {
                 page = 1;
@@ -36,15 +36,16 @@
 
             for (var i = (page - 1) * records_per_page; i < (page * records_per_page) && i < objJson.length; i++) {
                 listingTable.innerHTML +=
-                "<div class='card' style='width:18rem'>" +
-                "<img class='card-img-top' src=" +objJson[i].photo+" alt='Imagem de capa do card'>"+
-                "<div class='card-body'>"+
-                    "<h5 class='card-title'>Título do card</h5>"+
-                    "<p class='card-text'>Um exemplo de texto rápido para construir o título do card e fazer"+
-                        "preencher o conteúdo do card.</p>"+
-                    "<a href='#' class='btn btn-primary'>Visitar</a>"+
-                "</div>"+
-            "</div>";
+                "<div class='col-5 justify-content-center'>"+
+                    "<div class='card text-black' style='width:auto; '>" +
+                        "<img class='card-img-top' src="+objJson[i].photo+" style='max-height: 18rem;' alt='Imagem de capa do card'>"+
+                        "<div class='card-body'>"+
+                            "<h5 class='card-title'>"+objJson[i].property_type+"</h5>"+
+                            "<p class='card-text'>Preço: R$ "+objJson[i].price +",00</p>"+
+                            "<a href='#' class=' mt-2 btn btn-outline-dark'>Visitar</a>"+
+                        "</div>"+
+                    "</div>"
+                "</div>"
             }
         }
         let clickPage = function () {

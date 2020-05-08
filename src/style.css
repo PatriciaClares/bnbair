@@ -1,3 +1,14 @@
+* {
+  margin: 0;
+  padding: 0;
+  outline: 0;
+  box-sizing: border-box;
+}
+
+body{
+  -webkit-font-smoothing: antialiased;
+
+}
   /* Stackoverflow preview fix, please ignore */
 .navbar-nav {
   flex-direction: row;
@@ -12,4 +23,10 @@
 .ml-auto .dropdown-menu {
     left: auto !important;
     right: 0px;
+}
+
+.scrolling-wrapper{
+	overflow-x: auto;
+	padding-top: 30px;
+	padding-bottom: 70px;	
 }
