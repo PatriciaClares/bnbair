@@ -8,15 +8,15 @@
 body{
   -webkit-font-smoothing: antialiased;
 
+
 }
   /* Stackoverflow preview fix, please ignore */
 .navbar-nav {
   flex-direction: row;
 }
 
-.nav-link {
-    padding-right: .5rem !important;
-    padding-left: .5rem !important;
+.nav-espaco {
+  margin-left: 1rem;
 }
 
 /* Fixes dropdown menus placed on the right side */
@@ -28,12 +28,14 @@ body{
 .scrolling-wrapper{
 	overflow-x: auto;
 	padding-top: 30px;
-	padding-bottom: 70px;	
+  padding-bottom: 70px;	
+  padding-block-end: 30px;
 }
 
 
 .card {
   width: auto;
+  cursor: pointer;
 }
 
 .card-img-top {
@@ -43,4 +45,28 @@ body{
 .card:hover{
   transform: translateY(-0.25em);
   box-shadow: 0 0 11px rgba(15, 15, 15, 0.5); 
+}
+
+.cards {
+  margin-top: 200px;
+}
+
+.d-flex {
+  margin-top: 100px;
+  margin-bottom: 100px;
+}
+
+.card-img-top {
+  max-height: 250px;
+  min-height: 150px;
+  
+}
+
+.footer {
+  width: 80%;
+  height: auto;
+}
+
+.card-deck {
+  margin-bottom: 30px;
 }

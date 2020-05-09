@@ -14,7 +14,7 @@
 
         console.log(objJson)
         let current_page = 1;
-        let records_per_page = 4;
+        let records_per_page = 6;
 
         this.init = function () {
             changePage(1);
