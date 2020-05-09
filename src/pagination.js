@@ -37,12 +37,12 @@
             for (var i = (page - 1) * records_per_page; i < (page * records_per_page) && i < objJson.length; i++) {
                 listingTable.innerHTML +=
                 "<div class='col-5 justify-content-center'>"+
-                    "<div class='card text-black' style='width:auto; '>" +
-                        "<img class='card-img-top' src="+objJson[i].photo+" style='max-height: 18rem;' alt='Imagem de capa do card'>"+
+                    "<div class='card text-black'>" +
+                        "<img class='card-img-top' src="+objJson[i].photo+" alt='Imagem de capa do card'>"+
                         "<div class='card-body'>"+
                             "<h5 class='card-title'>"+objJson[i].property_type+"</h5>"+
                             "<p class='card-text'>Preço: R$ "+objJson[i].price +",00</p>"+
-                            "<a href='#' class=' mt-2 btn btn-outline-dark'>Visitar</a>"+
+                            "<a href='#' class=' mt-2 btn btn-outline-dark shadow'>Visitar</a>"+
                         "</div>"+
                     "</div>"
                 "</div>"
