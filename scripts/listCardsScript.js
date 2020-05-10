@@ -5,7 +5,7 @@ request.send()
 
 var apiAirbnb = JSON.parse(request.responseText)
 
-request.open('GET', 'http://www.mocky.io/v2/5eb7941b3100007700c8a1dc', false)
+request.open('GET', 'https://api.jsonbin.io/b/5eb7aa168284f36af7b8a0c1/1', false)
 request.setRequestHeader("secret-key", "$2b$10$9VjhdGleV4U/7gW1CATiPOqBr6/AF9L1CFEEK9gpI.TXbA/tCxZBK");
 request.send()
 
@@ -24,7 +24,7 @@ for (let index = 0; index < apiAirbnb.length; index++) {
     days = localStorage.getItem('days')
     state = localStorage.getItem('valueState')
 
-    if(state!='São Paulo' && state!= 'Rio Grande Do Sul'){
+    if(state!='São Paulo' && state!= 'Rio Grande do Sul'){
         cards.innerHTML += "<span>Infelizmente não temos estadias neste local, Procure por São Paulo Ou Rio Grande do Sul"
         break;
     }
@@ -44,14 +44,13 @@ for (let index = 0; index < apiAirbnb.length; index++) {
     }
 }
 
-console.log(cardsByState)
 function initMap() {
     let map = new google.maps.Map(document.getElementById('map'), {
         //construct map in São Paulo
         center: new google.maps.LatLng(cardsByState[0].location.lat, cardsByState[0].location.lng),
         zoom: 15
     });
-
+    
     for (let i = 0; i < cardsByState.length; i++) {
         new google.maps.Marker({
             position: new google.maps.LatLng(cardsByState[i].location.position.lat, cardsByState[i].location.position.lng),
