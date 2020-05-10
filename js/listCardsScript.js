@@ -5,7 +5,7 @@ request.send()
 
 var apiAirbnb = JSON.parse(request.responseText)
 
-request.open('GET', 'http://www.mocky.io/v2/5eb7195f3100006a00c8a115', false)
+request.open('GET', 'http://www.mocky.io/v2/5eb7941b3100007700c8a1dc', false)
 request.send()
 
 const mockLocation = JSON.parse(request.responseText)
@@ -22,6 +22,11 @@ var cardsByState = [];
 for (let index = 0; index < apiAirbnb.length; index++) {
     days = localStorage.getItem('days')
     state = localStorage.getItem('valueState')
+
+    if(state!='São Paulo' && state!= 'Rio Grande Do Sul'){
+        cards.innerHTML += "<span>Infelizmente não temos estadias neste local, Procure por São Paulo Ou Rio Grande do Sul"
+        break;
+    }
     
     if (apiAirbnb[index].location.name === state) {
         cards.innerHTML +=
@@ -38,6 +43,7 @@ for (let index = 0; index < apiAirbnb.length; index++) {
     }
 }
 
+console.log(cardsByState)
 function initMap() {
     let map = new google.maps.Map(document.getElementById('map'), {
         //construct map in São Paulo

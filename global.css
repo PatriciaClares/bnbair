@@ -35,15 +35,6 @@
     margin-inline-start: 5px;
   }
 
-
-  #error {
-    position: relative;
-    transform: translateY(-50%);
-    top: 100px;
-    max-width: 50%;
-    left: 20%;
-}
-
 .btn-outline-light{
   color: black;
   border-color: black;
@@ -55,4 +46,18 @@
 
 .form-control, .is-invalid {
   border-color: #dd4746;
+}
+
+#prevent:hover{
+  background-color: #dd4746;
+  border-color: black;
+}
+
+
+.cursor {
+  cursor: pointer;
+}
+
+.card{
+  border:2px solid #efb8c0;
 }

@@ -11,7 +11,7 @@
 
 <body>
     <nav class="navbar navbar-expand-lg navbar-light sticky-top">
-        <a class="navbar-brand" href="#">Navbar</a>
+        <a class="navbar-brand" href="#">BnBair</a>
         <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent"
             aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
             <span class="navbar-toggler-icon"></span>
@@ -19,7 +19,7 @@
         <div class="collapse navbar-collapse" id="navbarSupportedContent">
             <ul class="navbar-nav ml-auto">
                 <li class="nav-item">
-                    <a class="nav-link">Entrar</a>
+                    <a class="nav-link cursor">Entrar</a>
                 </li>
                 <li class="nav-espaco nav-item">
                     <button class=" btn btn-outline-light">Cadastre-se</button>
@@ -29,9 +29,6 @@
     </nav>
 
     <div class="container-fluid">
-        <div id="error" class="alert alert-danger" style="display: none;" role="alert">
-            <strong>Ops!</strong> Data inválida
-        </div>
         <form class="d-flex">
             <div class="form-row">
                 <div class="bb col-3">
@@ -69,15 +66,18 @@
                 </div>
                 <div class="col-3">
                     <label>Check-in</label>
-                    <input type="date" id="checkin" class="form-control" placeholder="Check-in" required>
+                    <input type="date" id="checkin" class="form-control" required>
                 </div>
                 <div class="col-3">
                     <label>Checkout</label>
-                    <input type="date" id="checkout" class="form-control" placeholder="checkout" required>
+                    <input type="date" id="checkout" class="form-control" required>
                 </div>
                 <a type="submit" onclick="dateValidation()" id='prevent' class="btn btn-outline-light flex-end">Buscar</a>
             </div>
         </form>
+        <div id="error" class="alert alert-danger" style="display: none;" role="alert">
+            <strong>Ops!</strong> Data ou estado inválido
+        </div>
     </div>
 
 
@@ -131,8 +131,8 @@
     <script src="https://code.jquery.com/jquery-3.2.1.slim.min.js"></script>
     <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/js/bootstrap.min.js"></script>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.12.9/umd/popper.min.js"></script>
-    <script src='./listCardsScript.js'></script>
-    <script src="./validateDateState.js"></script>
+    <script src='./js/listCardsScript.js'></script>
+    <script src="./js/validateDateState.js"></script>
 </body>
 
 </html>

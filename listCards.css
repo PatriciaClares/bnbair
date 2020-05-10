@@ -28,5 +28,11 @@
 .d-flex {
     margin-top: 1rem;
     margin-bottom: 2rem;
-    
+}
+
+#error {
+    position: relative;
+    transform: translateY(-50%);
+    top: 10px;
+    max-width: 30%;
 }
