@@ -2,7 +2,7 @@
 
 ### **Projeto desenvolvido com [HTML](https://www.w3schools.com/html/default.asp), [CSS](https://www.w3schools.com/css/default.asp), [Javascript](https://developer.mozilla.org/en-US/docs/Web/JavaScript), [Booststrap](https://getbootstrap.com/) e [Netlify](https://www.netlify.com/)**
 
-Este projeto foi desenvolvido para listar e mostrar em um mapa as estadias por regiões e seus preços, os preços variam de acordo com a quantidade de dias.
+Este projeto é similar ao [Airbnb](https://www.airbnb.com.br/) e foi desenvolvido para aplicar algumas funcionalidades como: consumo de informações de uma api para renderizar cards, filtro de resultados baseado na localização, valor da estádia por dia, integração de APIs do Google e paginação
 
 ### API externas
 - [google Maps](https://cloud.google.com/maps-platform/?_ga=2.152082745.1057290785.1589132901-104666352.1588987426&_gac=1.158331336.1588995617.Cj0KCQjwhtT1BRCiARIsAGlY51IVbL1mbwgBvSBG2zN7V3_Owj3RkYI9UD78rCzt_KUlFjOfKPeJmRcaAnWFEALw_wcB)
