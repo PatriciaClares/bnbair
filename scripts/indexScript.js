@@ -61,8 +61,8 @@
             pageNumber.innerHTML = ''
             for (let i = 1; i < numPages() + 1; i++) {
             pageNumber.innerHTML += 
-                "<span class'page-item>"+
-                    "<span class='changeColor page-link href='#>"+i+"</span>"+
+                "<span class'page-item'>"+
+                    "<span id='changeColor' class='changeColor target page-link' href='#'>"+i+"</span>"+
                 "</span>"
             }
         }
