@@ -32,7 +32,7 @@ for (let index = 0; index < apiAirbnb.length; index++) {
     if (apiAirbnb[index].location.name === state) {
         cards.innerHTML +=
             "<div style='width:16rem; height:16rem' id='max-width'>" +
-            "<div class='card'>" +
+            "<div class='card '>" +
             "<img class='card-img-top' id='img' src=" + apiAirbnb[index].photo + " alt='Imagem de capa do card'>" +
             "<div class='card-body'>" +
             "<h5 class='card-title'>" + apiAirbnb[index].property_type + "</h5>" +
