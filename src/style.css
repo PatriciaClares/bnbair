@@ -1,14 +1,6 @@
-* {
-  margin: 0;
-  padding: 0;
-  outline: 0;
-  box-sizing: border-box;
-}
 
-body{
-  -webkit-font-smoothing: antialiased;
-
-
+.navbar {
+  background-color: hotpink;
 }
   /* Stackoverflow preview fix, please ignore */
 .navbar-nav {
@@ -27,8 +19,8 @@ body{
 
 .scrolling-wrapper{
 	overflow-x: auto;
-	padding-top: 30px;
-  padding-bottom: 70px;	
+	padding-top: 10px;
+  padding-bottom: 10px;	
   padding-block-end: 30px;
 }
 
@@ -36,6 +28,10 @@ body{
 .card {
   width: auto;
   cursor: pointer;
+}
+
+.card-body {
+  justify-content: space-between;
 }
 
 .card-img-top {
@@ -70,3 +66,11 @@ body{
 .card-deck {
   margin-bottom: 30px;
 }
+
+.page-item .page-link {
+  border:5px solid #666
+}
+
+
+
+

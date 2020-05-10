@@ -1,37 +1,40 @@
 <html lang="en">
 
 <head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.1.3/css/bootstrap.min.css" />
-    <link rel="stylesheet" href="./style.css">
+    <link rel="stylesheet" href="./listCards.css">
     <link rel="stylesheet" href="./global.css">
+    <title>data</title>
 </head>
 
 <body>
-   
-        <nav class="navbar navbar-expand-lg navbar-light sticky-top">
-            <a class="navbar-brand" href="#">Navbar</a>
-            <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent"
-                aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
-                <span class="navbar-toggler-icon"></span>
-            </button>
-            <div class="collapse navbar-collapse" id="navbarSupportedContent">
-                <ul class="navbar-nav ml-auto">
-                    <li class="nav-item">
-                        <a class="nav-link">Entrar</a>
-                    </li>
-                    <li class="nav-espaco nav-item">
-                        <button class=" btn btn-outline-light">Cadastre-se</button>
-                    </li>
-                </ul>
-            </div>
-        </nav>
-    <div class="container">
+    <nav class="navbar navbar-expand-lg navbar-light sticky-top">
+        <a class="navbar-brand" href="#">Navbar</a>
+        <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent"
+            aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+            <span class="navbar-toggler-icon"></span>
+        </button>
+        <div class="collapse navbar-collapse" id="navbarSupportedContent">
+            <ul class="navbar-nav ml-auto">
+                <li class="nav-item">
+                    <a class="nav-link">Entrar</a>
+                </li>
+                <li class="nav-espaco nav-item">
+                    <button class=" btn btn-outline-light">Cadastre-se</button>
+                </li>
+            </ul>
+        </div>
+    </nav>
+
+    <div class="container-fluid">
         <div id="error" class="alert alert-danger" style="display: none;" role="alert">
             <strong>Ops!</strong> Data inválida
         </div>
-        <form class="d-flex justify-content-center">
+        <form class="d-flex">
             <div class="form-row">
-                <div class="col-3">
+                <div class="bb col-3">
                     <label for="validationServer04">Estado</label>
                     <select class="custom-select is-invalid" id="validationServer04" required>
                         <option selected disabled value="">Choose...</option>
@@ -72,21 +75,27 @@
                     <label>Checkout</label>
                     <input type="date" id="checkout" class="form-control" placeholder="checkout" required>
                 </div>
-                <a type="submit" onclick="dateValidation()" class="btn btn-outline-dark flex-end">Buscar</a>
+                <a type="submit" onclick="dateValidation(), stateList()" class="btn btn-outline-dark flex-end">Buscar</a>
             </div>
         </form>
+    </div>
 
-        <nav aria-label="Page navigation example">
-            <div class="card-deck scrolling-wrapper row flex-row flex-nowrap" id="card-deck">
-            </div>
-            <ul class="pagination justify-content-center" id="pagination">
-            </ul>
-        </nav>
-        
+
+
+    <div class="d-flex container-fluid">
+        <div class="row col-6 addScroll " id="card-deck">
+
+        </div>
+
+        <div class='col' id="map"></div>
+    </div>
+
+
+    <div class="container-fluid">
         <footer>
             <div class="row d-flex justify-content-center">
-                <div class="col-md-8">
-                    <p class="text-center text-md-left">© 2020 <strong>Patricia Clares</strong>
+                <div class="col-md-8 padding">
+                    <p class="text-center text-md-left">&copy; 2020 <strong>Patricia Clares</strong>
                     </p>
                 </div>
                 <div class="col-md-1 col-lg-4">
@@ -94,34 +103,35 @@
                         <ul class="list-unstyled list-inline">
                             <li class="list-inline-item">
                                 <a target="_blank" class="btn-floating btn-lg rgba-white-slight mx-1"
-                                href='https://www.facebook.com/dev.patrica?ref=bookmarks'>
-                                <i class="fab fa-facebook-f"></i>
-                            </a>
-                        </li>
-                        <li class="list-inline-item">
-                            <a target="_blank" class="btn-floating btn-lg rgba-white-slight mx-1"
-                            href='https://www.linkedin.com/in/patricia-clares/'>
-                            <i class="fab fa-linkedin-in"></i>
-                        </a>
-                    </li>
-                    <li class="list-inline-item">
-                        <a target="_blank" class="btn-floating btn-lg rgba-white-slight mx-1"
-                        href='https://github.com/PatriciaClares'>
-                        <i class="fab fab fa-github"></i>
-                    </a>
-                </li>
-            </ul>
-        </div>
+                                    href='https://www.facebook.com/dev.patrica?ref=bookmarks'>
+                                    <i class="fab fa-facebook-f"></i>
+                                </a>
+                            </li>
+                            <li class="list-inline-item">
+                                <a target="_blank" class="btn-floating btn-lg rgba-white-slight mx-1"
+                                    href='https://www.linkedin.com/in/patricia-clares/'>
+                                    <i class="fab fa-linkedin-in"></i>
+                                </a>
+                            </li>
+                            <li class="list-inline-item">
+                                <a target="_blank" class="btn-floating btn-lg rgba-white-slight mx-1"
+                                    href='https://github.com/PatriciaClares'>
+                                    <i class="fab fab fa-github"></i>
+                                </a>
+                            </li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+        </footer>
     </div>
-</div>
-</footer>
 
-</div>
+    <script async defer src="https://maps.googleapis.com/maps/api/js?key=AIzaSyCvynP_MpyINnsO4ENZPH68bUazm1Hw3_s&callback=initMap"></script>
+    <script src="https://kit.fontawesome.com/a076d05399.js"></script>
     <script src="https://code.jquery.com/jquery-3.2.1.slim.min.js"></script>
     <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/js/bootstrap.min.js"></script>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.12.9/umd/popper.min.js"></script>
-    <script src="./indexscript.js"></script>
-    <script src="https://kit.fontawesome.com/a076d05399.js"></script>
+    <script src='./listCardsScript.js'></script>
 </body>
 
 </html>

@@ -1,0 +1,58 @@
+
+.navbar {
+    background-color: #efb8c0;
+  }
+    /* Stackoverflow preview fix, please ignore */
+  .navbar-nav {
+    flex-direction: row;
+  }
+  
+  .nav-espaco {
+    margin-left: 1rem;
+  }
+  
+  /* Fixes dropdown menus placed on the right side */
+  .ml-auto .dropdown-menu {
+      left: auto !important;
+      right: 0px;
+  }
+  
+
+* {
+    margin: 0;
+    padding: 0;
+    outline: 0;
+    box-sizing: border-box;
+  }
+  
+  body{
+    -webkit-font-smoothing: antialiased;
+  }
+  
+  .flex-end {
+    margin: auto;
+    margin-top: 31px;
+    margin-inline-start: 5px;
+  }
+
+
+  #error {
+    position: relative;
+    transform: translateY(-50%);
+    top: 100px;
+    max-width: 50%;
+    left: 20%;
+}
+
+.btn-outline-light{
+  color: black;
+  border-color: black;
+}
+
+.btn-outline-light:hover{
+  background-color:transparent;
+}
+
+.form-control, .is-invalid {
+  border-color: #dd4746;
+}
