@@ -36,7 +36,7 @@
             for (var i = (page - 1) * records_per_page; i < (page * records_per_page) && i < objJson.length; i++) {
                 listingTable.innerHTML +=
                 "<div class='col-5 justify-content-center'>"+
-                    "<div class='card text-black' id='click'>" +
+                    "<div class='card text-black'>" +
                         "<img class='card-img-top' src="+objJson[i].photo+" alt='Imagem de capa do card'>"+
                         "<div class='card-body'>"+
                             "<h5 class='card-title'>"+objJson[i].property_type+"</h5>"+
@@ -78,20 +78,3 @@
 document.getElementById('click').onclick = function () {
     window.location='./listCards.html'
 }
-
-function dateValidation() {
-    checkin = new Date(document.getElementById("checkin").value)
-     checkout = new Date(document.getElementById("checkout").value)
- 
-     if (isValid(checkin, checkout)) {
-         window.location.assign('listCards.html')
-         document.getElementById('data').innerHTML('oi')
-     } else {
-     document.getElementById('error').style.display = 'block'
-     }
- }
- 
- function isValid(checkin, checkout) {
-     console.log(checkin, checkout);
-     return checkin < checkout ? true : false
- }

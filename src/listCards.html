@@ -75,7 +75,7 @@
                     <label>Checkout</label>
                     <input type="date" id="checkout" class="form-control" placeholder="checkout" required>
                 </div>
-                <a type="submit" onclick="dateValidation(), stateList()" class="btn btn-outline-dark flex-end">Buscar</a>
+                <a type="submit" onclick="dateValidation()" id='prevent' class="btn btn-outline-light flex-end">Buscar</a>
             </div>
         </form>
     </div>
@@ -132,6 +132,7 @@
     <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/js/bootstrap.min.js"></script>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.12.9/umd/popper.min.js"></script>
     <script src='./listCardsScript.js'></script>
+    <script src="./validateDateState.js"></script>
 </body>
 
 </html>

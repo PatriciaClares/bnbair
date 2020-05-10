@@ -27,7 +27,6 @@
 
 .card {
   width: auto;
-  cursor: pointer;
 }
 
 .card-body {
@@ -36,11 +35,6 @@
 
 .card-img-top {
   max-height: 8rm;
-}
-
-.card:hover{
-  transform: translateY(-0.25em);
-  box-shadow: 0 0 11px rgba(15, 15, 15, 0.5); 
 }
 
 .cards {
