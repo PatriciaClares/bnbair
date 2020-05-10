@@ -6,6 +6,7 @@ request.send()
 var apiAirbnb = JSON.parse(request.responseText)
 
 request.open('GET', 'http://www.mocky.io/v2/5eb7941b3100007700c8a1dc', false)
+request.setRequestHeader("secret-key", "$2b$10$9VjhdGleV4U/7gW1CATiPOqBr6/AF9L1CFEEK9gpI.TXbA/tCxZBK");
 request.send()
 
 const mockLocation = JSON.parse(request.responseText)
