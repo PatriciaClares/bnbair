@@ -15,7 +15,7 @@ Este projeto foi desenvolvido para listar e mostrar em um mapa as estadias por r
 Para iniciar o desenvolvimento, é necessário clonar o projeto do GitHub num diretório de sua preferência:
 ```shell
 cd "diretorio de sua preferencia"
-git clone https://github.com/condessalovelace/mavenquickstart
+git clone https://github.com/PatriciaClares/bnbair
 ```
 Em seguida abra o projeto na sua IDE.
 
