@@ -1,6 +1,6 @@
 # BnbAir
 
-### **Projeto desenvolvido com [HTML](https://www.w3schools.com/html/default.asp), [CSS](https://www.w3schools.com/css/default.asp), [Javascript](https://developer.mozilla.org/en-US/docs/Web/JavaScript), [Booststrap](https://getbootstrap.com/) e [Netlify](https://www.netlify.com/)**
+### **Projeto desenvolvido com [HTML](https://www.w3schools.com/html/default.asp), [CSS](https://www.w3schools.com/css/default.asp), [Javascript](https://developer.mozilla.org/en-US/docs/Web/JavaScript), [Bootstrap](https://getbootstrap.com/) e [Netlify](https://www.netlify.com/)**
 
 Este projeto é similar ao [Airbnb](https://www.airbnb.com.br/) e foi desenvolvido para aplicar algumas funcionalidades como: consumo de informações de uma api para renderizar cards, filtro de resultados baseado na localização, valor da estádia por dia, integração de APIs do Google e paginação
 
